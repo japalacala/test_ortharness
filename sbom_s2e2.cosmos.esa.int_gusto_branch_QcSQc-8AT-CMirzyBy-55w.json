@@ -1,0 +1,100 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:0d1a5f36-e7f6-4705-abd5-13109aecd39e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-04-24T13:50:21Z",
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "10.4.3",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@10.4.3",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@10.4.3",
+          "author": "OWASP Foundation",
+          "publisher": "OWASP Foundation"
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "component": {
+      "group": "",
+      "name": "harness",
+      "version": "latest",
+      "type": "application",
+      "bom-ref": "pkg:gem/harness@latest",
+      "purl": "pkg:gem/harness@latest",
+      "components": []
+    }
+  },
+  "components": [
+    {
+      "group": "int.esa.esac.gusto",
+      "name": "gusto-fltdyn",
+      "version": "2.2-SNAPSHOT",
+      "purl": "pkg:maven/int.esa.esac.gusto/gusto-fltdyn@2.2-SNAPSHOT?type=jar",
+      "type": "library",
+      "bom-ref": "pkg:maven/int.esa.esac.gusto/gusto-fltdyn@2.2-SNAPSHOT?type=jar",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 1,
+              "value": "/harness/gusto/gusto-gui/pom.xml"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/harness/gusto/gusto-gui/pom.xml"
+        }
+      ]
+    },
+    {
+      "group": "int.esa.esac.gusto",
+      "name": "gusto-gui",
+      "version": "2.2-SNAPSHOT",
+      "purl": "pkg:maven/int.esa.esac.gusto/gusto-gui@2.2-SNAPSHOT?type=jar",
+      "type": "library",
+      "bom-ref": "pkg:maven/int.esa.esac.gusto/gusto-gui@2.2-SNAPSHOT?type=jar",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 1,
+              "value": "/harness/gusto/gusto-demo/pom.xml"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/harness/gusto/gusto-demo/pom.xml"
+        }
+      ]
+    }
+  ],
+  "services": [],
+  "dependencies": []
+}
